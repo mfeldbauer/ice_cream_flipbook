@@ -19,6 +19,7 @@ body {
     position: relative;
     width: 350px;
     height: 500px;
+    transition: transform 0.5s;
 }
 
 .paper {
@@ -27,6 +28,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
+    perspective: 1500px;
 }
 
 .front,
@@ -37,10 +39,14 @@ body {
     height: 100%;
     top: 0;
     left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
 }
 
 .front {
     z-index: 1; /* so the front page goes on top of the back page */
+    backface-visibility: hidden;
+    border-left: 3px solid gray;
 }
 
 .back {
@@ -57,12 +63,23 @@ body {
     align-items: center;
 }
 
+.back-content{
+    transform: rotateY(180deg);
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg)
+}
+
 /* Buttons */
 button{
     border: none;
     background-color: transparent;
     cursor: pointer;
     margin: 10px;
+    transition: transform 0.5s;
 }
 
 button:focus {
