@@ -43,33 +43,43 @@ body {
     transition: transform 0.5s;
 }
 
-.front {
+.front,
+.cover {
     z-index: 1; /* so the front page goes on top of the back page */
     backface-visibility: hidden;
     border-left: 3px solid gray;
 }
 
-.back {
+.back-cover {
     z-index: 0;
 }
 
 /* Contents of pages */
-.front-content,
-.back-content {
+.front-content-cover,
+.back-content-cover,
+.front-content-p2,
+.back-content-b2,
+.front-content-p3,
+.back-content-back-cover {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    position: absolute;
+    top: 30px;
 }
 
-.back-content{
+.back-content-cover,
+.back-content-b2,
+.back-content-back-cover {
     transform: rotateY(180deg);
 }
 
 /* Paper flip effect */
 .flipped .front,
-.flipped .back {
+.flipped .cover,
+.flipped .back,
+.flipped .back-cover {
     transform: rotateY(-180deg)
 }
 
@@ -107,3 +117,160 @@ i {
 #p3 {
     z-index: 1;
 }
+
+.cover,
+.back-cover{
+    background-color: navy;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+/* Cover */
+.book-title{
+    color: gold;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    font-size: 2.3em;
+    position: absolute;
+    top: 10px;
+}
+
+.cover-img {
+    width: 200px;
+    position: absolute;
+    object-fit: cover;
+    top: 80px;
+}
+
+.map-code {
+    width: 75px;
+    position: absolute;
+    bottom: 50px;
+}
+
+/* Chain ice cream places */
+.page-title{
+    position: absolute;
+    font-size: 2em;
+}
+
+.chain-img-brusters {
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    top: 45px;
+    left: 20px;
+}
+
+.chain-img-jenis {
+    width: 140px;
+    height: 60px;
+    position: absolute;
+    top: 45px;
+    right: 20px;
+}
+
+.chain-img-cold-stone {
+    width: 180px;
+    height: 150px;
+    position: absolute;
+    top: 90px;
+    left: 1px;
+}
+
+.chain-img-bjs {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 90px;
+    right: 15px;
+}
+
+.chain-img-hd {
+    width: 120px;
+    height: 70px;
+    position: absolute;
+    top: 210px;
+    left: 30px;
+}
+
+.chain-img-whits {
+    width: 120px;
+    height: 70px;
+    position: absolute;
+    top: 210px;
+    right: 30px;
+}
+
+/* Local ice cream places in the triangle */
+.tri-img-andias {
+    width: 140px;
+    height: 60px;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+}
+
+.tri-img-simon {
+    width: 120px;
+    height: 70px;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+}
+
+.tri-img-cow {
+    width: 120px;
+    height: 60px;
+    position: absolute;
+    top: 130px;
+    left: 30px;
+}
+
+.tri-img-pincho-loco {
+    width: 160px;
+    height: 30px;
+    position: absolute;
+    top: 160px;
+    right: 10px;
+}
+
+.tri-img-locopops {
+    width: 70px;
+    height: 90px;
+    position: absolute;
+    top: 200px;
+    left: 50px;
+}
+
+/* Local ice cream places but outside the triangle */
+.out-tri-img-hop {
+    width: 140px;
+    height: 60px;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+}
+
+.out-tri-img-boom {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.out-tri-img-dairio {
+    width: 120px;
+    height: 50px;
+    position: absolute;
+    top: 135px;
+    left: 35px;
+}
+
