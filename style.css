@@ -249,6 +249,14 @@ i {
     left: 50px;
 }
 
+.tri-img-vita {
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    top: 200px;
+    right: 50px;
+}
+
 /* Local ice cream places but outside the triangle */
 .out-tri-img-hop {
     width: 140px;
